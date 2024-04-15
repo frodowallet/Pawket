@@ -1,7 +1,7 @@
 import { AccountKey } from "../services/crypto/account";
 import { AddressType } from "../services/crypto/puzzle";
 import { DidDetail, NftDetail, TokenPuzzleDetail, TokenPuzzleObserver } from "../services/crypto/receive";
-import { DonwloadedNftCollection } from "./nft";
+import { DownloadedNftCollection } from "./nft";
 import { CoinRecord } from "./wallet";
 
 export type AccountType = "Serial" | "Password" | "Legacy" | "Address" | "PublicKey";
@@ -37,7 +37,7 @@ export interface AccountEntity extends PersistentAccount {
   activities?: CoinRecord[];
   tokens: AccountTokens;
   nfts?: NftDetail[];
-  extraInfo: DonwloadedNftCollection;
+  extraInfo: DownloadedNftCollection;
   dids?: DidDetail[];
   addressPuzzles: TokenPuzzleDetail[];
   observePuzzles?: TokenPuzzleObserver[];
